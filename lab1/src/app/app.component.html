@@ -1,0 +1,9 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<h1>
+  {{title}}
+</h1>
+<div>
+  <input #content title="Content" placeholder="Input something..." (keyup)="0">
+  <button (click)="content.value = ''" [disabled]="content.value === ''">Remove</button>
+  <p>{{content.value}}</p>
+</div>
