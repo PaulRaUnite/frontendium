@@ -1,4 +1,14 @@
+<ng-template #odd>
+  <app-odd></app-odd>
+</ng-template>
+<ng-template #even>
+  <app-even></app-even>
+</ng-template>
 <div>
-  <app-tiker (even_odd)="set_even_odd($event)"></app-tiker>
-  <p>{{even_odd}}</p>
+  <app-tiker (even_odd)="add_even_odd($event)"></app-tiker>
+  <ul>
+    <li *ngFor="let e of even_odd">
+      <ng-container *ngIf="e === 0; then even; else odd"></ng-container>
+    </li>
+  </ul>
 </div>

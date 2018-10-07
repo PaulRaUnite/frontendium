@@ -1,6 +1,8 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import {async, ComponentFixture, TestBed} from '@angular/core/testing';
 
-import { TikerComponent } from './tiker.component';
+import {TikerComponent} from './tiker.component';
+import {OddComponent} from '../odd/odd.component';
+import {EvenComponent} from '../even/even.component';
 
 describe('TikerComponent', () => {
   let component: TikerComponent;
@@ -8,9 +10,13 @@ describe('TikerComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ TikerComponent ]
+      declarations: [
+        TikerComponent,
+        OddComponent,
+        EvenComponent
+      ]
     })
-    .compileComponents();
+      .compileComponents();
   }));
 
   beforeEach(() => {

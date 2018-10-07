@@ -1,4 +1,4 @@
-import {Component, EventEmitter, OnInit, Output} from '@angular/core';
+import {Component, EventEmitter, Output} from '@angular/core';
 
 
 export class Odd {
@@ -15,7 +15,7 @@ export class Even {
 export class TikerComponent {
   timer = null;
   count: number = 0;
-  @Output() even_odd = new EventEmitter<Even | Odd>();
+  @Output() even_odd = new EventEmitter<number>();
 
   constructor() {
   }
@@ -24,13 +24,7 @@ export class TikerComponent {
     if (this.timer == null) {
       this.timer = setInterval(() => {
         console.log("tick");
-        let v;
-        if (this.count % 2) {
-          v = new Odd();
-        } else {
-          v = new Even();
-        }
-        this.even_odd.emit(v);
+        this.even_odd.emit(this.count %2);
         this.count += 1;
       }, 1000)
     }

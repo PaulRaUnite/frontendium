@@ -3,11 +3,15 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { TikerComponent } from './tiker/tiker.component';
+import { OddComponent } from './odd/odd.component';
+import { EvenComponent } from './even/even.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    TikerComponent
+    TikerComponent,
+    OddComponent,
+    EvenComponent
   ],
   imports: [
     BrowserModule

@@ -1,5 +1,4 @@
-import {Component, OnInit} from '@angular/core';
-import {Even, Odd} from "./tiker/tiker.component";
+import {Component} from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -7,19 +6,13 @@ import {Even, Odd} from "./tiker/tiker.component";
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  even_odd: number | null = null;
+  even_odd: number[] = [];
 
   constructor() {
   }
 
-  set_even_odd(event) {
-    if (event instanceof Even) {
-      this.even_odd = 1;
-    } else if (event instanceof Odd) {
-      this.even_odd = 0;
-    } else {
-      this.even_odd = null
-    }
+  add_even_odd(event: number) {
+      this.even_odd = this.even_odd.concat([event])
   }
 }
 
