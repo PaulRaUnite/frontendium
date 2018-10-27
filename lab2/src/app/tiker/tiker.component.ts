@@ -1,12 +1,6 @@
 import {Component, EventEmitter, Output} from '@angular/core';
 
 
-export class Odd {
-}
-
-export class Even {
-}
-
 @Component({
   selector: 'app-tiker',
   templateUrl: './tiker.component.html',
@@ -35,9 +29,7 @@ export class TikerComponent {
     if (this.timer == null) {
       return;
     }
-    this.even_odd.emit(null);
     clearInterval(this.timer);
-    this.count = 0;
     this.timer = null;
   }
 }
