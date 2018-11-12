@@ -28,7 +28,7 @@ export class ListsService {
   }
 
   removeInactiveUser(index: number) {
-    this.active.splice(index, 1)
+    this.inactive.splice(index, 1)
   }
 
   activateUser(index: number) {
