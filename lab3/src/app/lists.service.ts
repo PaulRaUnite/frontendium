@@ -37,7 +37,7 @@ export class ListsService {
     this.active.push(user);
   }
 
-  deactiveUser(index: number) {
+  deactivateUser(index: number) {
     let user = this.active[index];
     this.active.splice(index, 1);
     this.inactive.push(user);

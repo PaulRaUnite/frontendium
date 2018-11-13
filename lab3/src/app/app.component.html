@@ -2,7 +2,7 @@
 <ul>
   <li *ngFor="let user of active; index as i">
     <span>{{i}}-{{user}}</span>
-    <button (click)="listsService.deactiveUser(i)">Deactivate</button>
+    <button (click)="listsService.deactivateUser(i)">Deactivate</button>
     <button (click)="listsService.removeActiveUser(i)">Remove</button>
   </li>
 </ul>
