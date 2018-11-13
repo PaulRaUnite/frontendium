@@ -1,0 +1,11 @@
+.form {
+  margin-left: 20px;
+  background-color: lightcoral;
+  padding: 10px;
+}
+label {
+  display: inline-block;
+}
+label, input {
+  width: calc(50% - 20px);
+}

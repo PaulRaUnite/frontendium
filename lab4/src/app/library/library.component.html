@@ -1,0 +1,12 @@
+<ul>
+  <li *ngFor="let book of books">
+    <span>{{book.id}}</span>
+    <span>{{book.title}}</span>
+    <span>{{book.author}}</span>
+    <span>{{book.year}}</span>
+    <div class="controls">
+    <button (click)="goto(book.id)">Details</button>
+    <button (click)="removeBook(book.id)">Remove</button>
+    </div>
+  </li>
+</ul>

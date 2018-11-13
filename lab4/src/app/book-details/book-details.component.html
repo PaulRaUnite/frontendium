@@ -1,0 +1,15 @@
+<div class="details" *ngIf="book !== undefined">
+  <p>
+    Title: {{book.title}}
+  </p>
+  <p>
+    Author: {{book.author}}
+  </p>
+  <p>
+    Year: {{book.year}}
+  </p>
+  <div class="controls">
+    <button (click)="back()">Back</button>
+    <button (click)="remove()">Remove</button>
+  </div>
+</div>

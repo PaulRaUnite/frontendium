@@ -1,0 +1,9 @@
+nav {
+  background-color: lightgray;
+  padding: 10px 0;
+  margin-bottom: 10px;
+}
+.container {
+  width: 800px;
+  margin: 0 auto;
+}
