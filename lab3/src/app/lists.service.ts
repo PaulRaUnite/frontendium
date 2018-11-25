@@ -8,10 +8,8 @@ import {Observable, of} from "rxjs";
 export class ListsService {
   active: string[] = [];
   inactive: string[] = [];
-  counter: CounterService;
 
   constructor(private counterService: CounterService) {
-    this.counter = counterService;
   }
 
   addUser(name: string, active: boolean) {
@@ -20,7 +18,6 @@ export class ListsService {
     } else {
       this.inactive.push(name);
     }
-    this.counter.increase();
   }
 
   removeActiveUser(index: number) {
@@ -35,12 +32,14 @@ export class ListsService {
     let user = this.inactive[index];
     this.inactive.splice(index, 1);
     this.active.push(user);
+    this.counterService.increase();
   }
 
   deactivateUser(index: number) {
     let user = this.active[index];
     this.active.splice(index, 1);
     this.inactive.push(user);
+    this.counterService.increase();
   }
 
   getActiveUsers(): Observable<string[]> {

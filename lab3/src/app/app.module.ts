@@ -4,6 +4,7 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { UserComponent } from './user/user.component';
 import { NewUserComponent } from './new-user/new-user.component';
+import {CounterService} from "./counter.service";
 
 @NgModule({
   declarations: [
@@ -14,7 +15,7 @@ import { NewUserComponent } from './new-user/new-user.component';
   imports: [
     BrowserModule
   ],
-  providers: [],
+  providers: [CounterService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

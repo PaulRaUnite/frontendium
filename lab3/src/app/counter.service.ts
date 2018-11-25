@@ -1,15 +1,17 @@
-import {Injectable} from '@angular/core';
+import {EventEmitter, Injectable, Output} from '@angular/core';
 
-@Injectable({
-  providedIn: 'root'
-})
 export class CounterService {
-  count: number = 0;
+  counter: number = 0;
 
   constructor() {
   }
 
   increase() {
-    this.count++
+    this.counter++;
+    console.log(this.counter)
+  }
+
+  getValue(): number {
+    return this.counter;
   }
 }
