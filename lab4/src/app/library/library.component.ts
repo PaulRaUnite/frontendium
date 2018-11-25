@@ -11,7 +11,7 @@ import {ActivatedRoute, Router} from "@angular/router";
 export class LibraryComponent implements OnInit {
   books: Book[] = [];
 
-  constructor(private route: ActivatedRoute, private router: Router, private library: LibraryService) {
+  constructor(private router: Router, private library: LibraryService) {
     this.library.getBooks().subscribe((v) => this.books = v)
   }
 
@@ -19,7 +19,7 @@ export class LibraryComponent implements OnInit {
   }
 
   goto(id: number) {
-    this.router.navigate(['books/' + id.toString()]);
+    this.router.navigate(['books/', id]);
   }
 
   removeBook(id: number) {

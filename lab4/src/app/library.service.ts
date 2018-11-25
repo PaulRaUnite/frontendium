@@ -13,8 +13,9 @@ export class LibraryService {
     this.books.push(new Book(0, 'Book', 'Me', 1999));
   }
 
-  addBook(title: string, author: string, year: number): number {
-    this.books.push(new Book(this.id_counter, title, author, year));
+  addBook(book: Book): number {
+    book.id = this.id_counter;
+    this.books.push(book);
     return this.id_counter++;
   }
 
